@@ -9,7 +9,7 @@ public class Tape
 
     public Tape(string originTape)
     {
-        _tapeString = new StringBuilder(originTape);
+        _tapeString = new StringBuilder(originTape + "    ");
     }
 
     public Tape(Tape other)
@@ -36,12 +36,12 @@ public class Tape
 
     public override string ToString()
     {
-        string output = string.Concat(Enumerable.Repeat("()", Constant.PrintBufferAmount)) + " ";
+        /*string output = string.Concat(Enumerable.Repeat("()", Constant.PrintBufferAmount)) + " ";
         
         for (int i = 0; i < _tapeString.Length; i++)
             output +=  $"({_tapeString[i]}) ";
 
-        output += string.Concat(Enumerable.Repeat("()", Constant.PrintBufferAmount));
-        return output;
+        output += string.Concat(Enumerable.Repeat("()", Constant.PrintBufferAmount));*/
+        return _tapeString.ToString();
     }
 }

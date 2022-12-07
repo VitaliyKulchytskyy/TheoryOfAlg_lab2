@@ -2,7 +2,7 @@ namespace TuringMachine;
 
 public class TuringMachine
 {
-    public Tape MachineTape { get; }
+    public Tape MachineTape { get; private set; }
     private int _head;
     private readonly TransitionMatrix _transitions;
     private readonly TapeAnimation _tapeAnimation;
@@ -20,6 +20,11 @@ public class TuringMachine
         Tape originTape = new Tape(MachineTape);
         while (state != -1)
         {
+            if (_head < 0)
+            {
+                _head = 0;
+                MachineTape = new Tape(" " + MachineTape);
+            }
             Tape prevTape = new Tape(MachineTape);
             Transition transition = _transitions.GetTapeStatement(MachineTape[_head], state)!;
             MachineTape[_head] = transition.Replace;
@@ -29,6 +34,7 @@ public class TuringMachine
             { 
                 Move.Left  => _head -= 1,
                 Move.Right => _head += 1,
+                Move.Hold => _head += 0,
                 _ => throw new ArgumentException()
             }; 
             state = transition.State;
