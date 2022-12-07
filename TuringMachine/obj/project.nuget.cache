@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "MRW/J8MRHGiG9SwCnBiKhYXTMApE2obA0fhBMFi/C+4DIbdWGslP6XMPr43rTSPv3DXfwB8DiON2WmVFSMOhqQ==",
+  "dgSpecHash": "4sTgrghdXc87qkDl/9yPoSNEl5wjdGudojUl87/2yx68rH41TAfRGr86JuVDKlNRBLkwSI9pUXUP9zfspXLjIg==",
   "success": true,
-  "projectFilePath": "E:\\Programing\\C#\\TheoryOfAlg_lab2\\TuringMachine\\TuringMachine.csproj",
+  "projectFilePath": "/home/karlenko/projects/csharp/TheoryOfAlg_lab2/TuringMachine/TuringMachine.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\vitam\\.nuget\\packages\\spectre.console\\0.45.0\\spectre.console.0.45.0.nupkg.sha512",
-    "C:\\Users\\vitam\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512"
+    "/home/karlenko/.nuget/packages/spectre.console/0.45.0/spectre.console.0.45.0.nupkg.sha512",
+    "/home/karlenko/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
+    "/home/karlenko/.nuget/packages/microsoft.netcore.app.ref/6.0.11/microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
+    "/home/karlenko/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.11/microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512",
+    "/home/karlenko/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.11/microsoft.netcore.app.host.linux-x64.6.0.11.nupkg.sha512"
   ],
   "logs": []
 }

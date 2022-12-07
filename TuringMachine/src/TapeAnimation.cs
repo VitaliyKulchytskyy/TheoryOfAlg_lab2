@@ -6,7 +6,7 @@ namespace TuringMachine;
 public class TapeAnimation
 {
     private readonly TransitionMatrix _transitionMatrix;
-    private readonly int _delayAnimation = 0;
+    private readonly int _delayAnimation;
     private int _iteration;
 
     public TapeAnimation(TransitionMatrix transitionMatrix, int delay = Constant.DelayAnimation)
@@ -18,19 +18,18 @@ public class TapeAnimation
     public void RunAnimation(Tape prevTape, Tape thisTape, int head, int state)
     {
         Table report = new Table();
-        report.AddColumn(_iteration.ToString());
+        report.AddColumn(_iteration++.ToString());
 
         report.AddRow($"Before:\n{prevTape.GetSelectedTape(head)}\n")
             .AddRow(PrintTransitionMatrix(prevTape[head], state))
             .AddRow($"\nAfter:\n{thisTape.GetSelectedTape(head)}");
         
         AnsiConsole.Write(report);
-        _iteration++;
         Console.WriteLine();
         Thread.Sleep(_delayAnimation);
     }
     
-    public void RunAnimation(Tape prevTape, Tape thisTape)
+    public void PrintSummaryReport(Tape prevTape, Tape thisTape)
     {
         Table report = new Table();
         report.AddColumn("Summary");
@@ -43,8 +42,10 @@ public class TapeAnimation
 
     private Table PrintTransitionMatrix(char c, int state)
     {
-        Table table = new Table();
-        table.Border = TableBorder.Ascii;
+        Table table = new Table
+        {
+            Border = TableBorder.Ascii
+        };
         BuildHeader(table, _transitionMatrix.GetMaxStates());
             
         foreach (var elem in _transitionMatrix.GetAnimateableList())
@@ -57,7 +58,7 @@ public class TapeAnimation
     {
         for (int i = 0; i <= statesAmount; i++)
         {
-            string data = (i == 0) ? "a/c" : $"s{i - 1}";
+            string data = (i == 0) ? "a/s" : $"s{i - 1}";
             table.AddColumn(data);
         }
     }

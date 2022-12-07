@@ -2,8 +2,7 @@ namespace TuringMachine;
 
 public class TuringMachine
 {
-    public Tape MachineTape { get; private set; }
-    private int _head;
+    private readonly Tape _machineTape;
     private readonly TransitionMatrix _transitions;
     private readonly TapeAnimation _tapeAnimation;
 
@@ -11,34 +10,35 @@ public class TuringMachine
     {
         _transitions = transitions;
         _tapeAnimation = new TapeAnimation(_transitions);
-        MachineTape = new Tape(originTape);
+        _machineTape = new Tape(originTape);
     }
 
     public void Run()
     {
-        int state = 0;
-        Tape originTape = new Tape(MachineTape);
+        int state = 0, head = 0;
+        Tape originTape = new Tape(_machineTape);
         while (state != -1)
         {
-            if (_head < 0)
-            {
-                _head = 0;
-                MachineTape = new Tape(" " + MachineTape);
-            }
-            Tape prevTape = new Tape(MachineTape);
-            Transition transition = _transitions.GetTapeStatement(MachineTape[_head], state)!;
-            MachineTape[_head] = transition.Replace;
-            _tapeAnimation.RunAnimation(prevTape, MachineTape, _head, state);
+            Tape prevTape = new Tape(_machineTape);
+            Transition transition = _transitions.GetTapeStatement(_machineTape[head], state)!;
+            _machineTape[head] = transition.Replace;
+            _tapeAnimation.RunAnimation(prevTape, _machineTape, head, state);
 
-            _head = transition.Move switch
+            head = transition.Move switch
             { 
-                Move.Left  => _head -= 1,
-                Move.Right => _head += 1,
-                Move.Hold => _head += 0,
+                Move.Left  => head -= 1,
+                Move.Right => head += 1,
+                Move.Hold  => head += 0,
                 _ => throw new ArgumentException()
-            }; 
+            };
+            
+            if (head < 0)
+            {
+                head = 0;
+                _machineTape.ScrollTapeRight();
+            }
             state = transition.State;
         }
-        _tapeAnimation.RunAnimation(originTape, MachineTape);
+        _tapeAnimation.PrintSummaryReport(originTape, _machineTape);
     }
 }
