@@ -1,0 +1,17 @@
+/home/karlenko/projects/csharp/TheoryOfAlg_lab2/TuringMachine/bin/Debug/net6.0/TuringMachine
+/home/karlenko/projects/csharp/TheoryOfAlg_lab2/TuringMachine/bin/Debug/net6.0/TuringMachine.deps.json
+/home/karlenko/projects/csharp/TheoryOfAlg_lab2/TuringMachine/bin/Debug/net6.0/TuringMachine.runtimeconfig.json
+/home/karlenko/projects/csharp/TheoryOfAlg_lab2/TuringMachine/bin/Debug/net6.0/TuringMachine.dll
+/home/karlenko/projects/csharp/TheoryOfAlg_lab2/TuringMachine/bin/Debug/net6.0/TuringMachine.pdb
+/home/karlenko/projects/csharp/TheoryOfAlg_lab2/TuringMachine/obj/Debug/net6.0/TuringMachine.csproj.AssemblyReference.cache
+/home/karlenko/projects/csharp/TheoryOfAlg_lab2/TuringMachine/obj/Debug/net6.0/TuringMachine.GeneratedMSBuildEditorConfig.editorconfig
+/home/karlenko/projects/csharp/TheoryOfAlg_lab2/TuringMachine/obj/Debug/net6.0/TuringMachine.AssemblyInfoInputs.cache
+/home/karlenko/projects/csharp/TheoryOfAlg_lab2/TuringMachine/obj/Debug/net6.0/TuringMachine.AssemblyInfo.cs
+/home/karlenko/projects/csharp/TheoryOfAlg_lab2/TuringMachine/obj/Debug/net6.0/TuringMachine.csproj.CoreCompileInputs.cache
+/home/karlenko/projects/csharp/TheoryOfAlg_lab2/TuringMachine/obj/Debug/net6.0/TuringMachine.dll
+/home/karlenko/projects/csharp/TheoryOfAlg_lab2/TuringMachine/obj/Debug/net6.0/refint/TuringMachine.dll
+/home/karlenko/projects/csharp/TheoryOfAlg_lab2/TuringMachine/obj/Debug/net6.0/TuringMachine.pdb
+/home/karlenko/projects/csharp/TheoryOfAlg_lab2/TuringMachine/obj/Debug/net6.0/TuringMachine.genruntimeconfig.cache
+/home/karlenko/projects/csharp/TheoryOfAlg_lab2/TuringMachine/obj/Debug/net6.0/ref/TuringMachine.dll
+/home/karlenko/projects/csharp/TheoryOfAlg_lab2/TuringMachine/bin/Debug/net6.0/Spectre.Console.dll
+/home/karlenko/projects/csharp/TheoryOfAlg_lab2/TuringMachine/obj/Debug/net6.0/TuringMachine.csproj.CopyComplete
